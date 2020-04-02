@@ -1,0 +1,381 @@
+/* 
+ * __Imports________________________________________________________________
+ */
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Lilita+One|Roboto+Slab:400,700');
+@import "_base";
+
+/* 
+ * __Palette________________________________________________________________
+ */
+
+$purple: #583B7E;
+$pink: #C9729F;
+$yellow: #FFE4AA;
+$orange: #FCA699;
+$mid-pink: #E2869B;
+
+/* 
+ * __Typography_____________________________________________________________
+ */
+$text-family: 'Roboto Slab', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
+$display-family: 'Lilita One', Lucida Bright, Georgia, serif;
+
+body, select, input, textarea {
+  color: $yellow;
+  font-family: $text-family;
+}
+
+h1 {
+    font-family:$display-family;
+    font-size:3em;
+    color:$mid-pink;
+    text-align:center;
+    margin:0.5em 0;
+    line-height:$line-height;
+}
+
+h2 {
+    font-family:$display-family;
+    font-size:4em;
+    color:$pink;
+    line-height:$line-height;
+    text-transform:lowercase;
+}
+
+h3 {
+    color:$pink;
+    font-family:$text-family;
+    line-height:$line-height;
+    margin-top:$line-height * 2em;
+    margin-bottom:$line-height * 1em;
+    font-size:2.25em;
+    text-align:center;
+}
+
+h4 {
+    text-transform:uppercase;
+    color:$orange;
+}
+
+p {
+    
+}
+
+.btn {
+    text-transform:uppercase;
+    padding:0.75em 2em;
+    background-color:$orange;
+    border-color:$mid-pink;
+    text-shadow:0.5px 0.5px 0 $purple;
+    &:hover {
+        border-color:$mid-pink;
+        background-color:$pink;
+    }
+}
+
+a {
+    text-decoration:none;
+}
+
+label {
+    display:block;
+    line-height:$line-height;
+    text-transform:uppercase;
+    color:$pink;
+}
+
+/* 
+ * __Mobile First________________________________________________________________
+ */
+
+#main {
+    min-height:100vh;
+}
+body, html, #main {
+    background-color:$purple;
+}
+
+header {
+    @extend .col-sm-12, .col-lg-2;
+    background-color:$yellow;
+    padding-top:2em;
+}
+
+#pseudologo {
+    background-color:$orange;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:0 auto;
+}
+
+nav {
+    display:block;
+    ul {
+        @include clearfix;
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+    li {
+        text-align:center;
+        width:50%;
+        display:inline-block;
+        float:left;
+    }
+    a {
+        color:$purple;
+        text-transform: uppercase;
+        font-size:1.5em;
+        display:block;
+        height:100%;
+        padding:1em 0;
+        &:hover {
+            text-decoration:none;
+            background-color:$orange;
+        }
+    }
+}
+
+#content {
+    @extend .col-sm-12, .col-lg-9;
+    padding:2em;
+    h2 {
+        border-color:$pink - 40;
+    }
+}
+
+#page-title-text {
+    p {
+        font-size:1.5em;
+        color:$orange;
+    }
+}
+
+#page-content {
+    margin-top:2em;
+}
+
+.triple {
+    margin:2em 0;
+    .fas {
+        margin:0 auto;
+        font-size:4em;
+        display:block;
+        text-align:center;
+        padding-top:45px;
+        color:$pink;
+    }
+}
+
+.circle-img {
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background-color:$orange;
+    margin: 0 auto 1.5em;
+}
+
+.bs {
+    background:$orange url('../img/bs.png') center no-repeat;
+    background-size:100px 100px;
+}
+
+.h5 {
+    background:$orange url('../img/h5.png') center no-repeat;
+    background-size:100px 100px;
+}
+
+.sass {
+    background:$orange url('../img/sass.png') center no-repeat;
+    background-size:100px 100px;
+}
+
+.home, .about {
+    h3 {
+        
+        
+    }
+    h4 {
+        padding-bottom:0.25em;
+        border-bottom:1px dashed $orange;
+        text-align:center;
+    }
+}
+
+.portfolio-item {
+    border:1px solid $purple + 40;
+    border-radius:8px;
+}
+
+.card-body {
+    padding:0 1em 1em;
+}
+
+.card-title {
+    color:$mid-pink;
+    text-transform:uppercase;
+    font-weight:700;
+}
+
+.card-text {
+    margin:1.25em 0 1.5em;
+}
+
+.card-img-top {
+    background-image:url('../img/stock.png');
+    width:100%;
+    height:150px;
+    border-bottom:1px solid $purple + 40;
+    margin-bottom:2em;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.contact {
+    margin-top:3em;
+    p {
+        font-size:1.25em;
+        margin:1.5em 0 1em;
+        vertical-align:middle;
+        i {
+            font-size:1.5em;
+            color:$pink;
+            margin-right:0.5em;
+            vertical-align:bottom;
+            float:left;
+        }
+    }
+    h5 {
+        font-size:1.25em;
+        margin-bottom:2em;
+    }
+    section {
+        margin-top:5em;
+    }
+}
+
+#contact-form {
+    border:1px solid $pink - 40;
+    border-radius:8px;
+    padding:3em;
+    input {
+        margin-bottom:1.5em;
+    }
+    textarea {
+        width:100%;
+    }
+    button {
+        margin-top:1.5em;
+    }
+}
+/* 
+ * __Other Screens Second______________________________________________________________
+ */
+
+/*@media only screen and (min-width: 768px) {
+    #main {
+        @include clearfix;
+    }
+    .triple {
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}*/
+
+@media only screen and (min-width: 992px) {
+    #content {
+        float:right;
+    }
+    header {
+        width:20%;
+        position:absolute;
+        min-height:100%;
+        bottom:0;
+        
+    }
+    nav {
+        li {
+            width:auto;
+            float:none;
+            display:block;
+        }
+    }
+    section {
+        width:50%;
+        float:left;
+        &:first-child {
+            margin-top:10em;
+            padding-left:2em;
+        }
+    }
+    #content {
+        margin-left:20%;
+    }
+    .triple {
+        float:left;
+        width:27%;
+        margin:0 3%;
+        
+    }
+    .triple:first-child {
+        margin-left:0;
+    }
+}
+/*@media only screen and (min-width: 900px) {
+    #main {
+        position:relative;
+    }
+    header {
+        width:20%;
+        position:absolute;
+        min-height:100%;
+        bottom:0;
+        
+    }
+    nav {
+        li {
+            width:auto;
+            float:none;
+            display:block;
+        }
+    }
+    #content {
+        //float:left;
+        //width:80%;
+        //margin-left:20%;
+    }
+    section {
+        width:50%;
+        float:left;
+        &:first-child {
+            margin-top:10em;
+            padding-left:2em;
+        }
+    }
+}*/
+
+/*@media only screen and (min-width: 1025px) {
+    #pseudologo {
+        width:200px;
+        height:200px;
+    }
+    h3 {
+        margin-bottom:1em;
+    }
+    .triple {
+        float:left;
+        width:27%;
+        margin:0 3%;
+        
+    }
+    .triple:first-child {
+        margin-left:0;
+    }
+}*/

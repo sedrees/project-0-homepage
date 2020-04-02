@@ -1,0 +1,58 @@
+// This file must be imported before loading html5-boilerplate
+
+// base
+$line-height: 1.4 !default;
+$font-color: #222 !default;
+
+$link-color: #00e !default;
+$link-hover-color: #06e !default;
+$link-visited-color: #551a8b !default;
+
+$selected-font-color: #fff !default;
+$selected-background-color: #ff5e99 !default;
+
+$invalid-background-color: #f0dddd !default;
+
+/* 
+ * __Palette________________________________________________________________
+ */
+
+$purple: #583B7E;
+$pink: #C9729F;
+$yellow: #FFE4AA;
+$orange: #FCA699;
+$mid-pink: #E2869B;
+
+/* 
+ * __Typography_____________________________________________________________
+ */
+$text-family: 'Roboto Slab', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
+$display-family: 'Lilita One', Lucida Bright, Georgia, serif;
+
+h1 {
+    font-family:$display-family;
+    font-size:3em;
+    color:$mid-pink;
+    text-align:center;
+    margin:0.5em 0;
+    line-height:$line-height;
+}
+
+h2 {
+    font-family:$display-family;
+    font-size:5em;
+    color:$pink;
+    line-height:$line-height;
+    text-transform:lowercase;
+}
+
+h3 {
+    font-family:$display-family;
+}
+p {
+    color:$yellow;
+}
+
+a {
+    text-decoration:none;
+}
